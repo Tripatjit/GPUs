@@ -6,6 +6,14 @@ matb = np.array([[6, 8], [4, 2]])
 res = np.dot(mata, matb)
 print(res)
 
+def change_sqr(mat):
+    max_dim = max(mat.shape[0], mat.shape[1])
+    
+    next_power = 1 << max_dim.bit_length() if (max_dim & (max_dim - 1)) != 0 else max_dim
+    
+    return np.pad(mat, ((0, next_power - mat.shape[0]), (0, next_power - mat.shape[1])), mode='constant')
+
+
 def rec_sub_mat(a, b):
     n = a.shape[0]
     if(n == 1):
@@ -39,12 +47,28 @@ def rec_sub_mat(a, b):
 
         return matc
     
-print(rec_sub_mat(mata, matb))
+def strassen_multiply(a, b):
+    rows = a.shape[0]
+    cols = b.shape[1]
+    
+    a_new = change_sqr(a)
+    b_new = change_sqr(b)
+    
+    c_new = rec_sub_mat(a_new, b_new)
+    
+    return c_new[:rows, :cols]
+
+print(strassen_multiply(mata, matb))
 
 testa = np.array([[1,2,3,4],[2,3,4,5],[6,7,8,9],[9,6,4,5]])
 testb = np.array([[2,4,6,7], [1,4,5,6],[4,3,2,1], [5,6,7,7]])
 
 print(np.dot(testa, testb))
-print(rec_sub_mat(testa,testb))
+print(strassen_multiply(testa,testb))
 
+testa = np.array([[1,2,3],[2,3,4],[6,7,8],[4,5,9]])
+testb = np.array([[2,4,6,7], [1,4,5,6],[4,3,2,1]])
+
+print(np.dot(testa, testb))
+print(strassen_multiply(testa,testb))
 
