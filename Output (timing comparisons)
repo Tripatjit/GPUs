@@ -1,4 +1,4 @@
-
+when threshold == 1
 The following have been reloaded with a version change:
   1) python/3.10.13 => python/3.11.5
 
@@ -22,3 +22,37 @@ cuda
 512x512 matrix took 1883.5241130710347 seconds with iterative strassen.
 
 slurmstepd: error: *** JOB 17116118 ON g3 CANCELLED AT 2026-07-02T22:56:48 ***
+
+when threshold == 64
+
+128x128 matrix took 0.0008288470562547445 seconds with matmul.
+
+128x128 matrix took 0.0003447779454290867 seconds with recursive strassen.
+
+128x128 matrix took 0.0004125090781599283 seconds with iterative strassen.
+
+256x256 matrix took 8.593406528234482e-05 seconds with matmul.
+
+256x256 matrix took 0.001516768941655755 seconds with recursive strassen.
+
+256x256 matrix took 0.0026211049407720566 seconds with iterative strassen.
+
+512x512 matrix took 0.00012772995978593826 seconds with matmul.
+
+512x512 matrix took 0.01006550109013915 seconds with recursive strassen.
+
+512x512 matrix took 0.017750338185578585 seconds with iterative strassen.
+
+1024x1024 matrix took 0.0001846039667725563 seconds with matmul.
+
+1024x1024 matrix took 0.06947237905114889 seconds with recursive strassen.
+
+1024x1024 matrix took 0.12409020913764834 seconds with iterative strassen.
+
+2048x2048 matrix took 0.0006490328814834356 seconds with matmul.
+
+2048x2048 matrix took 0.485122008016333 seconds with recursive strassen.
+
+2048x2048 matrix took 0.8678119308315217 seconds with iterative strassen.
+
+
