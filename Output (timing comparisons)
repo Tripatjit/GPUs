@@ -23,6 +23,42 @@ cuda
 
 slurmstepd: error: *** JOB 17116118 ON g3 CANCELLED AT 2026-07-02T22:56:48 ***
 
+when threshold == 32
+The following have been reloaded with a version change:
+  1) python/3.10.13 => python/3.11.5
+
+cuda
+128x128 matrix took 0.019947687862440944 seconds with matmul.
+
+128x128 matrix took 0.0017278101295232773 seconds with recursive strassen.
+
+128x128 matrix took 0.002644662046805024 seconds with iterative strassen.
+
+256x256 matrix took 0.00011554989032447338 seconds with matmul.
+
+256x256 matrix took 0.010269878199324012 seconds with recursive strassen.
+
+256x256 matrix took 0.017822616966441274 seconds with iterative strassen.
+
+512x512 matrix took 0.00017457199282944202 seconds with matmul.
+
+512x512 matrix took 0.07158383191563189 seconds with recursive strassen.
+
+512x512 matrix took 0.12542356294579804 seconds with iterative strassen.
+
+1024x1024 matrix took 0.000256149098277092 seconds with matmul.
+
+1024x1024 matrix took 0.5067043360322714 seconds with recursive strassen.
+
+1024x1024 matrix took 0.9085876909084618 seconds with iterative strassen.
+
+2048x2048 matrix took 0.000619727885350585 seconds with matmul.
+
+2048x2048 matrix took 3.533470531925559 seconds with recursive strassen.
+
+2048x2048 matrix took 6.155317412922159 seconds with iterative strassen.
+
+
 when threshold == 64
 
 128x128 matrix took 0.0008288470562547445 seconds with matmul.
