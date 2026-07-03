@@ -1,0 +1,24 @@
+
+The following have been reloaded with a version change:
+  1) python/3.10.13 => python/3.11.5
+
+cuda
+128x128 matrix took 0.10799057106487453 seconds with matmul.
+
+128x128 matrix took 19.956435708911158 seconds with recursive strassen.
+
+128x128 matrix took 38.64122635195963 seconds with iterative strassen.
+
+256x256 matrix took 0.00032143399585038424 seconds with matmul.
+
+256x256 matrix took 140.19413133803755 seconds with recursive strassen.
+
+256x256 matrix took 271.2950813990319 seconds with iterative strassen.
+
+512x512 matrix took 0.0004295220132917166 seconds with matmul.
+
+512x512 matrix took 982.254167295061 seconds with recursive strassen.
+
+512x512 matrix took 1883.5241130710347 seconds with iterative strassen.
+
+slurmstepd: error: *** JOB 17116118 ON g3 CANCELLED AT 2026-07-02T22:56:48 ***
